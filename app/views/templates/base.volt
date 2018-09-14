@@ -14,6 +14,19 @@
     <link rel="stylesheet" type="text/css" href="/js/highlight/styles/darcula.css">
     <link rel="stylesheet" href="/css/docs.css" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico">
+
+    {%- if (not config.get('google').get('analytics', '') is empty) -%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90249744-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ config.path('google.analytics') }}');
+    </script>
+    {% endif %}
+
 </head>
 <body>
 
