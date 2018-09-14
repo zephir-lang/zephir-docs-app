@@ -1,0 +1,32 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root                     = true
+
+[*]
+charset                  = utf-8
+end_of_line              = lf
+
+[*.{bat,sh}]
+indent_style             = tab
+tab_width                = 4
+trim_trailing_whitespace = true
+insert_final_newline     = true
+
+[*.{php,volt,json}]
+indent_size              = 4
+indent_style             = space
+trim_trailing_whitespace = true
+insert_final_newline     = true
+
+[*.{yml,sh}]
+indent_size              = 2
+indent_style             = space
+trim_trailing_whitespace = true
+insert_final_newline     = true
+
+[*.md]
+indent_size              = 4
+indent_style             = space
+trim_trailing_whitespace = false
+insert_final_newline     = true
