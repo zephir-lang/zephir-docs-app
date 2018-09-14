@@ -32,10 +32,9 @@ class DocsController extends BaseController
 
         if (true === empty($version) || 'latest' === $version) {
             $suffix = '';
-            if (true !=== empty($page)) {
+            if (true !== empty($page)) {
                 $suffix = '/' . $page;
             }
-
             return $this->response->redirect(
                 base_url(
                     $this->getVersion('/' . $language . '/') . $suffix
