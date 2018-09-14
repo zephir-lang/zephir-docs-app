@@ -31,7 +31,16 @@ class DocsController extends BaseController
         $language = $this->getLanguage($language);
 
         if (true === empty($version) || 'latest' === $version) {
-            return $this->response->redirect(base_url($this->getVersion('/' . $language . '/')));
+            $suffix = '';
+            if (true !=== empty($page)) {
+                $suffix = '/' . $page;
+            }
+
+            return $this->response->redirect(
+                base_url(
+                    $this->getVersion('/' . $language . '/') . $suffix
+                )
+            );
         }
 
         $version = $this->getVersion('', $version);
@@ -49,11 +58,6 @@ class DocsController extends BaseController
         $article = preg_replace('/(<div.*?<\/div>)/ius', "", $article);
 
         $canonical = Text::reduceSlashes(base_url("{$language}/{$version}/{$page}"));
-
-        // @todo
-        if (strpos($this->request->getURI(), "/api/")) {
-            $canonical = base_url("{$language}/{$version}/api/{$page}");
-        }
 
         /**
          * Get the SEO stuff from here
