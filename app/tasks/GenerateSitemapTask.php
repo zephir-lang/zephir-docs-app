@@ -31,9 +31,9 @@ class GenerateSitemapTask extends Task
 
         /** @var SplFileInfo $file */
         foreach ($iterator as $file) {
-            if ('md' === $file->getExtension()) {
-                $temp     = str_replace($path, '', $file->getPath());
-                $parts    = explode('/', $temp);
+            $temp  = str_replace($path, '', $file->getPath());
+            $parts = explode('/', $temp);
+            if ('md' === $file->getExtension() && count($parts) > 1) {
                 $version  = $parts[0];
                 $language = $parts[1];
 
