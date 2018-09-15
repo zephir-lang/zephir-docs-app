@@ -13,6 +13,7 @@
     "require": {
         "php": ">= 7.0",
         "ext-phalcon": "~3.2",
+        "algolia/algoliasearch-client-php": "^1.27",
         "dariuszp/cli-progress-bar": "^1.0",
         "erusev/parsedown": "1.7.*",
         "erusev/parsedown-extra": "0.7.*",
