@@ -31,34 +31,34 @@ class GenerateSitemapTask extends Task
 
         /** @var SplFileInfo $file */
         foreach ($iterator as $file) {
-            $temp  = str_replace($path, '', $file->getPath());
-            $parts = explode('/', $temp);
-            if ('md' === $file->getExtension() && count($parts) > 1) {
-                $version  = $parts[0];
-                $language = $parts[1];
+            $temp     = str_replace($path, '', $file->getPath());
+            $parts    = explode('/', $temp);
+            $version  = $parts[0] ?? '';
+            $language = $parts[1] ?? '';
 
-                if ('-menu.md' !== substr($file->getFilename(), -8) &&
-                    'old' !== $version) {
+            if ('md' === $file->getExtension() &&
+                true !== empty($version) &&
+                '-menu.md' !== substr($file->getFilename(), -8) &&
+                'old' !== $version
+            ) {
+                $fullFile = sprintf(
+                    '%s/%s/%s',
+                    $language,
+                    $version,
+                    $file->getFilename()
+                );
 
-                    $fullFile = sprintf(
-                        '%s/%s/%s',
-                        $language,
-                        $version,
-                        $file->getFilename()
-                    );
-
-                    $elements[] = str_replace(
-                        [
-                            app_path('docs/'),
-                            '.md',
-                        ],
-                        [
-                            '',
-                            '',
-                        ],
-                        $fullFile
-                    );
-                }
+                $elements[] = str_replace(
+                    [
+                        app_path('docs/'),
+                        '.md',
+                    ],
+                    [
+                        '',
+                        '',
+                    ],
+                    $fullFile
+                );
             }
         }
 
