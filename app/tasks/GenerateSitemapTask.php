@@ -10,6 +10,7 @@ use SplFileInfo;
 use function Docs\Functions\app_path;
 use function file_put_contents;
 use function implode;
+use function substr;
 
 /**
  * GenerateSitemapTask
@@ -30,34 +31,34 @@ class GenerateSitemapTask extends Task
 
         /** @var SplFileInfo $file */
         foreach ($iterator as $file) {
-            if ('md' === $file->getExtension() || 'html' === $file->getExtension()) {
-                $docsPath = $file->getPath();
+            if ('md' === $file->getExtension()) {
                 $temp     = str_replace($path, '', $file->getPath());
                 $parts    = explode('/', $temp);
-                if (count($parts) > 1) {
-                    /**
-                     * Check if we have 2 or 3 elements; 3 is the API
-                     */
-                    $first    = $parts[0];
-                    $parts[0] = $parts[1];
-                    $parts[1] = $first;
-                    $docsPath = implode('/', $parts);
-                }
+                $version  = $parts[0];
+                $language = $parts[1];
 
-                $fullFile   = $docsPath . '/' . $file->getFilename();
-                $elements[] = str_replace(
-                    [
-                        app_path('docs/'),
-                        '.md',
-                        '.html',
-                    ],
-                    [
-                        '',
-                        '',
-                        '',
-                    ],
-                    $fullFile
-                );
+                if ('-menu.md' !== substr($file->getFilename(), -8) &&
+                    'old' !== $language) {
+
+                    $fullFile = sprintf(
+                        '%s/%s/%s',
+                        $language,
+                        $version,
+                        $file->getFilename()
+                    );
+
+                    $elements[] = str_replace(
+                        [
+                            app_path('docs/'),
+                            '.md',
+                        ],
+                        [
+                            '',
+                            '',
+                        ],
+                        $fullFile
+                    );
+                }
             }
         }
 
