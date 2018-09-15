@@ -6,6 +6,7 @@ use Docs\Exception\HttpException;
 use Phalcon\Http\ResponseInterface;
 use Phalcon\Text;
 use function Docs\Functions\base_url;
+use function str_replace;
 
 /**
  * Docs\Controllers\DocsController
@@ -62,17 +63,15 @@ class DocsController extends BaseController
          * Get the SEO stuff from here
          */
         $this->tag->setTitle($this->getSeoTitle($language, $version, $page));
-
         $contents = $this->viewSimple->render(
             $renderFile,
             [
-                'language'     => $language,
-                'version'      => $version,
-                'sidebar'      => $this->getDocument($language, $version, 'sidebar'),
-                'article'      => $article,
-                'article_menu' => $article_menu ? $article_menu[0] : [],
-                'menu'         => $this->getDocument($language, $version, $page . '-menu'),
-                'canonical'    => $canonical,
+                'language'    => $language,
+                'version'     => $version,
+                'sidebar'     => $this->getMenu($language, $version, 'sidebar'),
+                'article'     => $article,
+                'menu'        => $this->getMenu($language, $version, $page . '-menu'),
+                'canonical'   => $canonical,
             ]
         );
         $this->response->setContent($contents);

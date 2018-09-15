@@ -144,42 +144,6 @@ class BaseController extends PhController
     }
 
     /**
-     * Gets all the namespaces so that API URLs are generated properly
-     *
-     * @return array
-     */
-    protected function getNamespaces(): array
-    {
-        $key = 'namespaces.cache';
-        if (environment('production') && true === $this->cacheData->exists($key)) {
-            return $this->cacheData->get($key);
-        }
-
-        $namespaces = [];
-        $template   = '[%s](/[[language]]/[[version]]/api/%s)';
-
-        $data = get_declared_classes();
-        foreach ($data as $name) {
-            if (substr($name, 0, 8) === 'Phalcon\\') {
-                $apiName               = str_replace('\\', '_', $name);
-                $namespaces["`$name`"] = sprintf($template, $name, $apiName);
-            }
-        }
-
-        $data = get_declared_interfaces();
-        foreach ($data as $name) {
-            if (substr($name, 0, 8) === 'Phalcon\\') {
-                $apiName               = str_replace('\\', '_', $name);
-                $namespaces["`$name`"] = sprintf($template, $name, $apiName);
-            }
-        }
-
-        $this->cacheData->save($key, $namespaces);
-
-        return $namespaces;
-    }
-
-    /**
      * Gets the SEO title
      *
      * @param string $language
@@ -236,32 +200,12 @@ class BaseController extends PhController
                 $fileName
             )
         );
-        $apiFileName = app_path(
-            sprintf(
-                'docs/%s/%s/api/%s.md',
-                $version,
-                $language,
-                $fileName
-            )
-        );
-
         if (true === file_exists($pageName)) {
             $data = file_get_contents($pageName);
-        } elseif (true === file_exists($apiFileName)) {
-            $data = file_get_contents($apiFileName);
         } else {
             // The article does not exist
             return '';
         }
-
-        $namespaces = $this->getNamespaces();
-        $search     = array_keys($namespaces);
-        $replace    = array_values($namespaces);
-
-        /**
-         * API links
-         */
-        $data = str_replace($search, $replace, $data);
 
         /**
          * Language and version
@@ -281,6 +225,25 @@ class BaseController extends PhController
         $this->cacheData->save($key, $data);
 
         return $data;
+    }
+
+    /**
+     * @param string $language
+     * @param string $version
+     * @param string $fileName
+     *
+     * @return string
+     */
+    protected function getMenu($language, $version, $fileName): string
+    {
+        $document = $this->getDocument($language, $version, $fileName);
+        $document = str_replace(
+            '<li>',
+            '<li class="toc-entry toc-h2">',
+            $document
+        );
+
+        return ltrim(rtrim($document, '</ul>'), '<ul>');
     }
 
     /**

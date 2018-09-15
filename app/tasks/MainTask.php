@@ -41,7 +41,7 @@ class MainTask extends Task
 
         $commands = [
             '  -clear-cache          Clears the cached files',
-            '  -regenerate-api       Regenerate From API',
+            '  -update-search        Updates the search indexes in Algolia',
             '  -generate-sitemap     Generates the Sitemap',
         ];
 
