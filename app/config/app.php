@@ -28,7 +28,7 @@ $version      = current($versions);
 /**
  * Get the languages
  */
-$languageFile = app_path('/storage/languages/languages.json'));
+$languageFile = app_path('/storage/languages/languages.json');
 if (true === file_exists($languageFile)) {
     $languages = file_get_contents(app_path('/storage/languages/languages.json'));
 } else {
