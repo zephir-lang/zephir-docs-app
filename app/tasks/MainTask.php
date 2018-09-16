@@ -43,6 +43,7 @@ class MainTask extends Task
             '  -clear-cache          Clears the cached files',
             '  -update-search        Updates the search indexes in Algolia',
             '  -generate-sitemap     Generates the Sitemap',
+            '  -get-languages        Gets the languages from Crowdin',
         ];
 
         echo 'Commands:' . PHP_EOL;
