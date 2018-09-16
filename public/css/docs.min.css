@@ -198,12 +198,6 @@ body {
     margin-bottom: .25rem
 }
 
-@media (min-width: 992px) {
-    .bd-content > ol, .bd-content > p, .bd-content > ul {
-        max-width: 80%
-    }
-}
-
 .bd-title {
     margin-top: 1rem;
     margin-bottom: .5rem;
@@ -1656,4 +1650,8 @@ body {
     text-align: center;
     min-height: 2rem;
     background-color: #6f5499;
+}
+
+.lang-image {
+    width: 20px;
 }

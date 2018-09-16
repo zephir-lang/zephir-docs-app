@@ -18,13 +18,16 @@
 use function Docs\Functions\app_path;
 use function Docs\Functions\env;
 
-$versions = file(app_path('VERSIONS'), FILE_IGNORE_NEW_LINES);
+$versions  = file(app_path('VERSIONS'), FILE_IGNORE_NEW_LINES);
 end($versions);
-$version  = current($versions);
+$version   = current($versions);
+$languages = file_get_contents(app_path('/storage/languages/languages.json'));
+$languages = json_decode($languages, true);
 
 return [
     'version'         => $version,
     'versions'        => $versions,
+    'languages'       => $languages,
     'timezone'        => env('APP_TIMEZONE', 'UTC'),
     'debug'           => env('APP_DEBUG'),
     'env'             => env('APP_ENV'),

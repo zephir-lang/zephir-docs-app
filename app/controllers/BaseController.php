@@ -275,7 +275,7 @@ class BaseController extends PhController
      */
     protected function getLanguage(string $language): string
     {
-        $languages = config('languages');
+        $languages = $this->config->path('app.languages', []);
 
         if (!isset($languages[$language])) {
             return 'en';

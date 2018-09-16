@@ -17,18 +17,12 @@
 
 return [
     'version' => '9.11.0',
-
     'js' => [
-        'apache',
+        'cpp',
         'css',
-        'dockerfile',
-        'dos',
-        'javascript',
         'json',
-        'nginx',
         'php',
         'shell',
-        'sql',
         'twig',
         'yaml',
         'zephir',

@@ -301,6 +301,7 @@ if [[ "${CLEAR_CACHE}" -eq 1 ]]; then
     rm -f "${WORK_DIR}/storage/cache/config/*.php"
 
     validate_php_bin
+    ${PHP_BIN} ${WORK_DIR}/phalcon -get-languages
     ${PHP_BIN} ${WORK_DIR}/phalcon -clear-cache
     ${PHP_BIN} ${WORK_DIR}/phalcon -generate-sitemap
 

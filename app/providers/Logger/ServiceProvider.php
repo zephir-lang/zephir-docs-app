@@ -17,6 +17,7 @@
 
 namespace Docs\Providers\Logger;
 
+use function Docs\Functions\env;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
 use Phalcon\Logger;
@@ -64,8 +65,7 @@ class ServiceProvider implements ServiceProviderInterface
             'logger',
             function ($filename = null, $format = null) use ($logLevels) {
                 // Setting up the log level
-                $level = config('logger.level', self::DEFAULT_LEVEL);
-
+                $level = env('LOGGER_LEVEL', self::DEFAULT_LEVEL);
                 if (!array_key_exists($level, $logLevels)) {
                     $level = Logger::DEBUG;
                 } else {
@@ -73,16 +73,16 @@ class ServiceProvider implements ServiceProviderInterface
                 }
 
                 // Setting up date format
-                $date = config('logger.date', self::DEFAULT_DATE);
+                $date = env('LOGGER_DATE', self::DEFAULT_DATE);
 
                 // Format setting up
                 if (empty($format)) {
-                    $format = config('logger.format', self::DEFAULT_FORMAT);
+                    $format = env('LOGGER_FORMAT', self::DEFAULT_FORMAT);
                 }
 
                 // Setting up the filename
                 if (empty($filename)) {
-                    $filename = config('logger.defaultFilename', self::DEFAULT_FILENANE);
+                    $filename = env('LOGGER_DEFAULT_FILENAME', self::DEFAULT_FILENANE);
                 }
 
                 $filename = trim($filename, '\\/');
