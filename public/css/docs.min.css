@@ -1651,3 +1651,7 @@ body {
     min-height: 2rem;
     background-color: #6f5499;
 }
+
+.lang-image {
+    width: 20px;
+}
