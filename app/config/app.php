@@ -18,10 +18,23 @@
 use function Docs\Functions\app_path;
 use function Docs\Functions\env;
 
-$versions  = file(app_path('VERSIONS'), FILE_IGNORE_NEW_LINES);
+/**
+ * Get the versions and calculate the latest one
+ */
+$versions     = file(app_path('VERSIONS'), FILE_IGNORE_NEW_LINES);
 end($versions);
-$version   = current($versions);
-$languages = file_get_contents(app_path('/storage/languages/languages.json'));
+$version      = current($versions);
+
+/**
+ * Get the languages
+ */
+$languageFile = app_path('/storage/languages/languages.json'));
+if (true === file_exists($languageFile)) {
+    $languages = file_get_contents(app_path('/storage/languages/languages.json'));
+} else {
+    $languages = '[]';
+}
+
 $languages = json_decode($languages, true);
 
 return [
