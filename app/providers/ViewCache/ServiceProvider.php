@@ -44,11 +44,12 @@ class ServiceProvider implements ServiceProviderInterface
         $container->set(
             'viewCache',
             function () {
-                $driver  = config('cache.viewDriver', 'File');
+                $lifetime = env('CACHE_LIFETIME', 3600);
+                $driver   = env('VIEW_CACHE_DRIVER', 'file');
                 $adapter = '\Phalcon\Cache\Backend\\' . ucfirst($driver);
 
                 return new $adapter(
-                    new Output(['lifetime' => config('cache.lifetime', 3600)]),
+                    new Output(['lifetime' => $lifetime]),
                     [
                         'cacheDir' => app_path('storage/cache/view/'),
                     ]

@@ -17,6 +17,7 @@
 
 namespace Docs\Providers\CacheData;
 
+use function Docs\Functions\env;
 use Phalcon\Cache\Frontend\Data;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
@@ -40,9 +41,8 @@ class ServiceProvider implements ServiceProviderInterface
         $container->setShared(
             'cacheData',
             function () {
-                $lifetime = config('cache.lifetime', 3600);
-                $driver   = config('cache.driver', 'file');
-
+                $lifetime = env('CACHE_LIFETIME', 3600);
+                $driver   = env('CACHE_DRIVER', 'file');
                 $frontEnd = new Data(['lifetime' => $lifetime]);
                 $backEnd  = ['cacheDir' => app_path('storage/cache/data/')];
                 $adapter  = sprintf('\Phalcon\Cache\Backend\%s', ucfirst($driver));
