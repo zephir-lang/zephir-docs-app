@@ -1,12 +1,12 @@
             <form class="bd-search d-flex align-items-center">
                 <input type="search"
                        class="form-control"
-                       id="search-input"
+                       id="docs-search"
                        placeholder="Search..."
                        aria-label="Search for..."
                        autocomplete="off"
-                       data-siteurl="https://getbootstrap.com"
-                       data-docs-version="4.1">
+                       data-siteurl="{{ config.path('app.url') }}"
+                       data-docs-version="{{ config.path('app.version') }}">
                 <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3"
                         type="button"
                         data-toggle="collapse"

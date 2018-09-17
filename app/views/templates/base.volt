@@ -25,6 +25,8 @@
     <link rel="stylesheet" type="text/css" href="/js/highlight/styles/darcula.css">
     <link rel="stylesheet" href="/css/docs.min.css?v={{ date('YmdHis') }}" >
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
     <link rel="shortcut icon" href="/favicon.ico">
 
     <title>Zephir Language — Zephir {{ config.path('app.version') }} documentation</title>
@@ -38,34 +40,26 @@
     <!-- Facebook -->
     <!-- @todo -->
 
-    {%- if (not config.get('google').get('analytics', '') is empty) -%}
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90249744-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', '{{ config.path('google.analytics') }}');
-        </script>
+    {%- if (not config.path('app.googleAnalytics', '') is empty) -%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90249744-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ config.path('app.googleAnalytics') }}');
+    </script>
     {% endif %}
 </head>
 <body style="">
-    <a id="skippy"
-       class="sr-only sr-only-focusable"
-       href="{{ config.path('app.url') }}">
-        <div class="container">
-            <span class="skiplink-text">Skip to main content</span>
-        </div>
-    </a>
-
     {% include 'inc/header.volt' %}
 
     <div class="container-fluid">
         <div class="row flex-xl-nowrap">
             <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                {#{% include 'inc/search.volt' %}#}
+                {% include 'inc/search.volt' %}
 
                 <nav class="collapse bd-links" id="bd-docs-nav">
                     <div class="bd-toc-item active">
@@ -105,6 +99,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
+    {%- if (not config.path('app.algoliaSearchKey', '') is empty) -%}
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+            apiKey: '{{ config.path('app.algoliaSearchKey', '') }}',
+            indexName: 'zephir-lang',
+            inputSelector: '#docs-search',
+            debug: false
+        });
+    </script>
+    {% endif %}
     <script type="text/javascript" src="/js/highlight/highlight.pack.js"></script>
     <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
 </body>
