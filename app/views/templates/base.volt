@@ -106,6 +106,9 @@
             apiKey: '{{ config.path('app.algoliaSearchKey', '') }}',
             indexName: 'zephir-lang',
             inputSelector: '#docs-search',
+            algoliaOptions: {
+                'facetFilters': ["lang:{{ language }}", "version:{{ version }}"]
+            },
             debug: false
         });
     </script>
