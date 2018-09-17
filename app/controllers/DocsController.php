@@ -54,9 +54,6 @@ class DocsController extends BaseController
             throw new HttpException('Not Found', 404);
         }
 
-        preg_match('/(<div.*?<\/div>)/ius', $article, $article_menu);
-        $article = preg_replace('/(<div.*?<\/div>)/ius', "", $article);
-
         $canonical = Text::reduceSlashes(base_url("{$language}/{$version}/{$page}"));
 
         /**

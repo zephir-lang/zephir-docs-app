@@ -1,13 +1,5 @@
 {%- extends "templates/base.volt" -%}
 
-{%- block meta -%}
-    {%- include "include/noindex-meta.volt" with ['app_version': app_version] -%}
-{%- endblock -%}
-
-{%- block sidebar -%}
-    {{ sidebar }}
-{%- endblock -%}
-
 {%- block content -%}
     <p class="lead">
         Sorry for the inconvenience but something is not quite right at the moment.

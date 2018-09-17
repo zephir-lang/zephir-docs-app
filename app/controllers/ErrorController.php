@@ -35,7 +35,7 @@ class ErrorController extends BaseController
         $version = $this->getVersion();
 
         $this->viewSimple->setVars([
-            'sidebar'  => $this->getDocument('en', $version, 'sidebar'),
+            'sidebar'  => $this->getMenu('en', $version, 'sidebar'),
             'language' => 'en',
             'article'  => '',
             'support'  => config('app.supportEmail', 'support@phalconphp.com'),
@@ -52,7 +52,7 @@ class ErrorController extends BaseController
         $version = $this->getVersion();
 
         $this->viewSimple->setVars([
-            'sidebar'  => $this->getDocument('en', $version, 'sidebar'),
+            'sidebar'  => $this->getMenu('en', $version, 'sidebar'),
             'language' => 'en',
             'article'  => '',
             'support'  => config('app.supportEmail', 'support@phalconphp.com'),

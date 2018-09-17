@@ -85,24 +85,21 @@ class ErrorPageHandler extends Handler
         $view       = container('viewSimple');
         $response   = container('response');
 
-        $controller    = config('error.controller', 'error');
-        $defaultAction = config('error.action', 'show500');
-
         switch ($this->getException()->getCode()) {
             case 404:
                 $action = 'show404';
                 break;
             default:
-                $action = $defaultAction;
+                $action = 'show500';
         }
 
         /** @var \Phalcon\Mvc\Dispatcher $dispatcher */
         $dispatcher->setNamespaceName('Docs\Controllers');
-        $dispatcher->setControllerName($controller);
+        $dispatcher->setControllerName('error');
         $dispatcher->setActionName($action);
         $dispatcher->dispatch();
 
-        $content = $view->render("$controller/$action", $dispatcher->getParams());
+        $content = $view->render("error/{$action}", $dispatcher->getParams());
 
         $response->setContent($content)->send();
     }
