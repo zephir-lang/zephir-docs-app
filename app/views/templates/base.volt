@@ -40,21 +40,10 @@
     <!-- Facebook -->
     <!-- @todo -->
 
-    {%- if (not config.path('app.googleAnalytics', '') is empty) -%}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90249744-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', '{{ config.path('app.googleAnalytics') }}');
-    </script>
-    {% endif %}
+    {%- include 'inc/google.volt' -%}
 </head>
 <body style="">
-    {% include 'inc/header.volt' %}
+    {%- include 'inc/header.volt' -%}
 
     <div class="container-fluid">
         <div class="row flex-xl-nowrap">
@@ -99,17 +88,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-    {%- if (not config.path('app.algoliaSearchKey', '') is empty) -%}
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-    <script type="text/javascript"> docsearch({
-            apiKey: '{{ config.path('app.algoliaSearchKey', '') }}',
-            indexName: 'zephir-lang',
-            inputSelector: '#docs-search',
-            debug: false
-        });
-    </script>
-    {% endif %}
+    {%- include 'inc/algolia.volt' -%}
     <script type="text/javascript" src="/js/highlight/highlight.pack.js"></script>
     <script type="application/javascript">hljs.initHighlightingOnLoad();</script>
 </body>
