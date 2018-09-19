@@ -63,6 +63,7 @@ class DocsController extends BaseController
         $contents = $this->viewSimple->render(
             $renderFile,
             [
+                'page'        => $page,
                 'language'    => $language,
                 'version'     => $version,
                 'sidebar'     => $this->getMenu($language, $version, 'sidebar'),
