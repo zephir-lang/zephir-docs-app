@@ -39,7 +39,7 @@ class GenerateSitemapTask extends Task
             if ('md' === $file->getExtension() &&
                 true !== empty($version) &&
                 '-menu.md' !== substr($file->getFilename(), -8) &&
-                'old' !== $version
+                'old' !== $language
             ) {
                 $fullFile = sprintf(
                     '%s/%s/%s',
