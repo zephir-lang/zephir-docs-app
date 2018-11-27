@@ -83,13 +83,15 @@ class ServiceProvider implements ServiceProviderInterface
             // TODO(o2)
             // ->addCss($cssCdn, false)
             ->addCss(assets_uri('js/highlight/styles/googlecode.css', $version))
-            ->addCss(assets_uri('css/style.css', $version));
+            ->addCss(assets_uri('css/style.css', $version))
+        ;
 
         $assets
             ->collection('footer_js')
             // // TODO(o2)
             // ->addJs($jsCdn, false);
             ->addJs(assets_uri('js/main.min.js', $version))
-            ->addJs(assets_uri('js/highlight/highlight.pack.js', $version));
+            ->addJs(assets_uri('js/highlight/highlight.pack.js', $version))
+        ;
     }
 }

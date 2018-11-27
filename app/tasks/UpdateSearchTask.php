@@ -17,16 +17,15 @@
 
 namespace Docs\Cli\Tasks;
 
-use \AlgoliaSearch\Client;
-use function Docs\Functions\app_path;
-use function Docs\Functions\env;
+use AlgoliaSearch\Client;
+use FilesystemIterator;
 use Phalcon\CLI\Task;
 use RecursiveDirectoryIterator;
-use FilesystemIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
+use function Docs\Functions\app_path;
+use function Docs\Functions\env;
 use function sprintf;
-use function var_dump;
 
 
 /**
@@ -45,8 +44,8 @@ class UpdateSearchTask extends Task
         $applicationId  = env('ALGOLIA_APPLICATION_ID', '');
         $applicationKey = env('ALGOLIA_APPLICATION_KEY', '');
 
-        $client = new Client($applicationId, $applicationKey);
-        $index  = $client->initIndex('docs-index');
+        $client      = new Client($applicationId, $applicationKey);
+        $index       = $client->initIndex('docs-index');
         $elements    = [];
         $path        = app_path('docs/');
         $dirIterator = new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS);
@@ -64,7 +63,7 @@ class UpdateSearchTask extends Task
                 $language = $parts[1];
                 $version  = $parts[0];
                 if ('old' !== $language) {
-                    $pageName   = $docsPath . '/' . $file->getFilename();
+                    $pageName = $docsPath . '/' . $file->getFilename();
 
                     if (true === file_exists($pageName)) {
                         $data = file_get_contents($pageName);
@@ -86,10 +85,10 @@ class UpdateSearchTask extends Task
 
                         $data       = $this->parsedown->text($data);
                         $elements[] = [
-                            'version'      => $version,
-                            'language'     => $language,
-                            'filename'     => str_replace('.md', '', $file->getFilename()),
-                            'contents'     => $data,
+                            'version'  => $version,
+                            'language' => $language,
+                            'filename' => str_replace('.md', '', $file->getFilename()),
+                            'contents' => $data,
                         ];
                     }
                 }

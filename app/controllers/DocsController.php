@@ -2,12 +2,10 @@
 
 namespace Docs\Controllers;
 
-use Docs\Cli\Tasks\GetLanguagesTask;
 use Docs\Exception\HttpException;
 use Phalcon\Http\ResponseInterface;
 use Phalcon\Text;
 use function Docs\Functions\base_url;
-use function str_replace;
 
 /**
  * Docs\Controllers\DocsController
@@ -63,13 +61,13 @@ class DocsController extends BaseController
         $contents = $this->viewSimple->render(
             $renderFile,
             [
-                'page'        => $page,
-                'language'    => $language,
-                'version'     => $version,
-                'sidebar'     => $this->getMenu($language, $version, 'sidebar'),
-                'article'     => $article,
-                'menu'        => $this->getMenu($language, $version, $page . '-menu'),
-                'canonical'   => $canonical,
+                'page'      => $page,
+                'language'  => $language,
+                'version'   => $version,
+                'sidebar'   => $this->getMenu($language, $version, 'sidebar'),
+                'article'   => $article,
+                'menu'      => $this->getMenu($language, $version, $page . '-menu'),
+                'canonical' => $canonical,
             ]
         );
         $this->response->setContent($contents);

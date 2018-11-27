@@ -9,7 +9,6 @@ use RecursiveIteratorIterator;
 use SplFileInfo;
 use function Docs\Functions\app_path;
 use function file_put_contents;
-use function implode;
 use function substr;
 
 /**

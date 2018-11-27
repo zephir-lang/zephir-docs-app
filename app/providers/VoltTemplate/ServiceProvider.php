@@ -66,7 +66,8 @@ class ServiceProvider implements ServiceProviderInterface
 
 
             $volt->getCompiler()
-                ->addExtension(new VoltFunctions());
+                 ->addExtension(new VoltFunctions())
+            ;
 
             return $volt;
         };

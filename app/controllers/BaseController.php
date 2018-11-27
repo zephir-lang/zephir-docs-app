@@ -17,16 +17,15 @@
 
 namespace Docs\Controllers;
 
-use function array_search;
 use Phalcon\Cache\BackendInterface;
 use Phalcon\Config;
 use Phalcon\Mvc\Controller as PhController;
 use Phalcon\Mvc\View\Simple;
+use function array_search;
 use function Docs\Functions\app_path;
 use function Docs\Functions\config;
 use function Docs\Functions\environment;
 use function file_exists;
-use function var_dump;
 
 /**
  * Docs\Controllers\BaseController
@@ -70,7 +69,7 @@ class BaseController extends PhController
 
         if (true === file_exists($pageName)) {
             $data = file_get_contents($pageName);
-        } elseif (true === file_exists($apiFileName)) {
+        } else if (true === file_exists($apiFileName)) {
             $data = file_get_contents($apiFileName);
         } else {
             // The article does not exist
@@ -186,6 +185,25 @@ class BaseController extends PhController
      *
      * @return string
      */
+    protected function getMenu($language, $version, $fileName): string
+    {
+        $document = $this->getDocument($language, $version, $fileName);
+        $document = str_replace(
+            '<li>',
+            '<li class="toc-entry toc-h2">',
+            $document
+        );
+
+        return ltrim(rtrim($document, '</ul>'), '<ul>');
+    }
+
+    /**
+     * @param string $language
+     * @param string $version
+     * @param string $fileName
+     *
+     * @return string
+     */
     protected function getDocument($language, $version, $fileName): string
     {
         $key = sprintf('%s.%s.%s.cache', $fileName, $version, $language);
@@ -194,7 +212,7 @@ class BaseController extends PhController
             return $this->cacheData->get($key);
         }
 
-        $pageName    = app_path(
+        $pageName = app_path(
             sprintf(
                 'docs/%s/%s/%s.md',
                 $version,
@@ -227,25 +245,6 @@ class BaseController extends PhController
         $this->cacheData->save($key, $data);
 
         return $data;
-    }
-
-    /**
-     * @param string $language
-     * @param string $version
-     * @param string $fileName
-     *
-     * @return string
-     */
-    protected function getMenu($language, $version, $fileName): string
-    {
-        $document = $this->getDocument($language, $version, $fileName);
-        $document = str_replace(
-            '<li>',
-            '<li class="toc-entry toc-h2">',
-            $document
-        );
-
-        return ltrim(rtrim($document, '</ul>'), '<ul>');
     }
 
     /**

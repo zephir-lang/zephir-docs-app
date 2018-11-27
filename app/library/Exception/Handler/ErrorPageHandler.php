@@ -18,7 +18,6 @@
 namespace Docs\Exception\Handler;
 
 use Whoops\Handler\Handler;
-use function Docs\Functions\config;
 use function Docs\Functions\container;
 
 /**

@@ -17,14 +17,13 @@
 
 namespace Docs\Providers\Logger;
 
-use function Docs\Functions\env;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
 use Phalcon\Logger;
 use Phalcon\Logger\Adapter\File;
 use Phalcon\Logger\Formatter\Line;
 use function Docs\Functions\app_path;
-use function Docs\Functions\config;
+use function Docs\Functions\env;
 
 /**
  * Docs\Providers\Logger\ServiceProvider

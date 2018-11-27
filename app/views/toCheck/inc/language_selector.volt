@@ -5,7 +5,8 @@
     </div>
     <div class="nav-item__list" onclick="event.stopPropagation();">
         {% for code, name in config.path('languages') %}
-            <a href="{{ url }}/{{ code }}/{{ version }}/{{ page }}" class="custom-select__list-item">
+            <a href="{{ url }}/{{ code }}/{{ version }}/{{ page }}"
+               class="custom-select__list-item">
                 <img src="/images/flags/{{ code }}.gif" alt="">
                 <span>{{ name }}</span>
             </a>

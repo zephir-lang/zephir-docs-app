@@ -5,7 +5,8 @@
     </div>
     <div class="nav-item__list" onclick="event.stopPropagation();">
         {% for versionItem in config.path('versions') %}
-            <a href="{{ url }}/{{ language }}/{{ versionItem }}/{{ page }}" class="custom-select__list-item">
+            <a href="{{ url }}/{{ language }}/{{ versionItem }}/{{ page }}"
+               class="custom-select__list-item">
                 <span>{{ versionItem }}</span>
             </a>
         {% endfor %}

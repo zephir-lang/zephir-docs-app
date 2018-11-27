@@ -17,12 +17,11 @@
 
 namespace Docs\Providers\CacheData;
 
-use function Docs\Functions\env;
 use Phalcon\Cache\Frontend\Data;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
 use function Docs\Functions\app_path;
-use function Docs\Functions\config;
+use function Docs\Functions\env;
 
 /**
  * Docs\Providers\CacheData\ServiceProvider

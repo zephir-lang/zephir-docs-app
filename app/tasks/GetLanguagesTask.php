@@ -17,18 +17,15 @@
 
 namespace Docs\Cli\Tasks;
 
-use function array_multisort;
 use Phalcon\CLI\Task;
-use function asort;
+use function array_multisort;
 use function Docs\Functions\app_path;
 use function Docs\Functions\env;
 use function file_put_contents;
 use function json_decode;
-use const SORT_ASC;
-use const SORT_STRING;
 use function sprintf;
 use const PHP_EOL;
-use function sprintf;
+use const SORT_ASC;
 
 /**
  * GetLanguagesTask
@@ -67,7 +64,7 @@ class GetLanguagesTask extends Task
             'en' => [
                 'name' => 'English',
                 'code' => 'en',
-            ]
+            ],
         ];
         foreach ($crowdin['languages'] as $language) {
             $code = $languageMap[$language['code']] ?? 'en';
