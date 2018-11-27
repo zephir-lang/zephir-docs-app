@@ -17,6 +17,7 @@
 
 namespace Docs\Controllers;
 
+use function array_search;
 use Phalcon\Cache\BackendInterface;
 use Phalcon\Config;
 use Phalcon\Mvc\Controller as PhController;
@@ -25,6 +26,7 @@ use function Docs\Functions\app_path;
 use function Docs\Functions\config;
 use function Docs\Functions\environment;
 use function file_exists;
+use function var_dump;
 
 /**
  * Docs\Controllers\BaseController
@@ -256,11 +258,12 @@ class BaseController extends PhController
      */
     protected function getVersion(string $stub = '', string $version = ''): string
     {
-        if (empty($version) || strtolower($version) === 'latest') {
+        $versions = config('app.versions')->toArray();
+        if (empty($version) ||
+            strtolower($version) === 'latest' ||
+            false === array_search($version, $versions)
+        ) {
             $version = config('app.version', '9999');
-        } else {
-            $version = filter_var($version, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-            $version = $version ?? config('app.version', '9999');
         }
 
         return "{$stub}{$version}";
@@ -276,7 +279,6 @@ class BaseController extends PhController
     protected function getLanguage(string $language): string
     {
         $languages = $this->config->path('app.languages', []);
-
         if (!isset($languages[$language])) {
             return 'en';
         }
