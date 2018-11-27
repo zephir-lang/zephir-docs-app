@@ -9,7 +9,8 @@
         Couldn't find what your are looking for? Why not join out support forums
         and let us help you.
     </p>
-    <a href="https://phalcon.link/forum" class="support-forum__button" target="_blank">
+    <a href="https://phalcon.link/forum" class="support-forum__button"
+       target="_blank">
         Support Forums
     </a>
 </div>

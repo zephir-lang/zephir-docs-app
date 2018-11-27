@@ -1,4 +1,5 @@
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+<header
+    class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-2"
        href="{{ config.path('app.url') }}"
        aria-label="Zephir Documentation">

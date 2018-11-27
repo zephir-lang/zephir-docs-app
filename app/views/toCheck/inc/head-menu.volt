@@ -23,26 +23,33 @@
                         <span class="caret"></span>
                     </div>
                     <div class="nav-item__list">
-                        <a href="https://phalcon.link/forum" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/forum"
+                           class="custom-select__list-item" target="_blank">
                             Forum
                         </a>
-                        <a href="https://phalcon.link/blog" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/blog"
+                           class="custom-select__list-item" target="_blank">
                             Blog
                         </a>
-                        <a href="https://phalcon.link/resources" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/resources"
+                           class="custom-select__list-item" target="_blank">
                             Resources
                         </a>
                         <div class="nav-item__divider"></div>
-                        <a href="https://phalcon.link/f" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/f"
+                           class="custom-select__list-item" target="_blank">
                             Facebook
                         </a>
-                        <a href="https://phalcon.link/t" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/t"
+                           class="custom-select__list-item" target="_blank">
                             Twitter
                         </a>
-                        <a href="https://phalcon.link/g+" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/g+"
+                           class="custom-select__list-item" target="_blank">
                             Google+
                         </a>
-                        <a href="https://phalcon.link/gab" class="custom-select__list-item" target="_blank">
+                        <a href="https://phalcon.link/gab"
+                           class="custom-select__list-item" target="_blank">
                             Gab.ai
                         </a>
                     </div>
@@ -79,7 +86,8 @@
             {%- include "inc/version_selector_mobile.volt" -%}
         </div>
         <div>
-            <div class="nav-item nav-item-accordion" onclick="o2.topicsAccordion(this, event)">
+            <div class="nav-item nav-item-accordion"
+                 onclick="o2.topicsAccordion(this, event)">
                 Community
                 <span class="caret"></span>
             </div>

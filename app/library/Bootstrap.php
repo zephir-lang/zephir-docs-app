@@ -97,7 +97,8 @@ class Bootstrap
     /**
      * Initialize the Service Provider.
      *
-     * Usually the Service Provider register a service in the Dependency Injector Container.
+     * Usually the Service Provider register a service in the Dependency
+     * Injector Container.
      *
      * @param  ServiceProviderInterface $serviceProvider
      *
@@ -117,7 +118,8 @@ class Bootstrap
      * If failed the `development` will be used.
      *
      * After getting `APP_ENV` variable we set the Bootstrap::$environment
-     * and the `APPLICATION_ENV` constant which used in other Phalcon related projects eg Incubator.
+     * and the `APPLICATION_ENV` constant which used in other Phalcon related
+     * projects eg Incubator.
      */
     protected function setupEnvironment()
     {
@@ -228,7 +230,8 @@ class Bootstrap
     }
 
     /**
-     * Gets current application environment: production, staging, development, testing, etc.
+     * Gets current application environment: production, staging, development,
+     * testing, etc.
      *
      * @return string
      */

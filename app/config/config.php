@@ -15,16 +15,16 @@
   +------------------------------------------------------------------------+
 */
 
+use Docs\Controllers\DocsController;
 use function Docs\Functions\app_path;
 use function Docs\Functions\env;
-use Docs\Controllers\DocsController;
 
 /**
  * Get the versions and languages
  */
-$version   = '0.1';
-$languages = [];
-$versions  = [];
+$version     = '0.1';
+$languages   = [];
+$versions    = [];
 $crowdinFile = app_path('/storage/crowdin/crowdin.json');
 if (true === file_exists($crowdinFile)) {
     $crowdin = file_get_contents($crowdinFile);
@@ -55,6 +55,7 @@ return [
         'staticUrl'        => env('APP_STATIC_URL'),
         'lang'             => env('APP_LANG'),
         'supportEmail'     => env('APP_SUPPORT_EMAIL'),
+        'assetTag'         => 'development' !== env('APP_ENV') ? env('ASSET_TAG') : time(),
         'googleAnalytics'  => env('GOOGLE_ANALYTICS'),
         'algoliaSearchKey' => env('ALGOLIA_SEARCH_KEY'),
     ],
@@ -64,16 +65,16 @@ return [
     ],
     'highlight' => [
         'version' => '9.11.0',
-            'js' => [
-                'cpp',
-                'css',
-                'json',
-                'php',
-                'shell',
-                'twig',
-                'yaml',
-                'zephir',
-            ],
+        'js'      => [
+            'cpp',
+            'css',
+            'json',
+            'php',
+            'shell',
+            'twig',
+            'yaml',
+            'zephir',
+        ],
     ],
     'providers' => [
         // Application Service Providers
@@ -91,7 +92,7 @@ return [
         Docs\Providers\Dispatcher\ServiceProvider::class,
         Docs\Providers\Tags\ServiceProvider::class,
     ],
-    'routes'      => [
+    'routes'    => [
         DocsController::class => [
             'methods' => [
                 'get'  => [

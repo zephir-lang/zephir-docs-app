@@ -34,7 +34,8 @@
                 {% endfor %}
             </div>
             <div class="explore-topic">
-                <a href="javascript:void(0);" class="explore-topic__link" onclick="o2.toggleAllTopic(this)">
+                <a href="javascript:void(0);" class="explore-topic__link"
+                   onclick="o2.toggleAllTopic(this)">
                     Explore All Topics
                 </a>
             </div>

@@ -18,7 +18,7 @@
         <div class="navbar-collapse collapse" id="navbar-collapse-main">
             <ul class="nav navbar-nav navbar-right m-r-0">
                 <li class="dropdown">
-                    <a href="javascript:;"
+                    <a href="javascript:"
                        class="dropdown-toggle"
                        data-toggle="dropdown"
                        role="button"
@@ -69,12 +69,14 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="https://phalcon.link/about" class="header-nav-link">
+                    <a href="https://phalcon.link/about"
+                       class="header-nav-link">
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="https://phalcon.link/sponsors" class="header-nav-link">
+                    <a href="https://phalcon.link/sponsors"
+                       class="header-nav-link">
                         Sponsors
                     </a>
                 </li>
@@ -83,7 +85,8 @@
                         Support Us
                     </a>
                 <li>
-                    <a href="https://phalcon.link/download" class="btn btn-xs btn-success">
+                    <a href="https://phalcon.link/download"
+                       class="btn btn-xs btn-success">
                         Download
                     </a>
                 </li>

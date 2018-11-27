@@ -2,7 +2,8 @@
 
 {%- block content -%}
     <p class="lead">
-        Sorry for the inconvenience but something is not quite right at the moment.
+        Sorry for the inconvenience but something is not quite right at the
+        moment.
         We hope to solve it shortly. If you need to you can always contact us at
         <a href="{{ 'mailto:' ~ support }}">{{ support }}</a>,
         otherwise please check back in a few minutes!

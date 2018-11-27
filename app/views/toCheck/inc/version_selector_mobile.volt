@@ -1,4 +1,5 @@
-<div class="nav-item nav-item-accordion" onclick="o2.topicsAccordion(this,event)">
+<div class="nav-item nav-item-accordion"
+     onclick="o2.topicsAccordion(this,event)">
     Version {{ version }}
     <span class="caret"></span>
 </div>

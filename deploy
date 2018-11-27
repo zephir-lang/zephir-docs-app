@@ -305,6 +305,13 @@ if [[ "${CLEAR_CACHE}" -eq 1 ]]; then
     ${PHP_BIN} ${WORK_DIR}/phalcon -clear-cache
     ${PHP_BIN} ${WORK_DIR}/phalcon -generate-sitemap
 
+	printf "Setting up asset date...\n"
+	DEPLOY_DATE=`date +%Y%m%d%H%M`
+
+	mv .env storage/setup/.env.$DEPLOY_DATE
+	cat storage/setup/.env.$DEPLOY_DATE | \
+        sed -e "s/.*ASSET_TAG.*/ASSET_TAG=$DEPLOY_DATE/" > .env
+
     printf "Done\n\n"
 fi
 

@@ -61,7 +61,8 @@ class ClearCacheTask extends Task
         $bar   = new CliProgressBar($steps);
         $bar
             ->setColorToGreen()
-            ->display();
+            ->display()
+        ;
         foreach ($iterator as $file) {
             if (true !== $file->isDir() &&
                 ('php' === $file->getExtension() || 'cache' === $file->getExtension())

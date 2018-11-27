@@ -21,7 +21,6 @@ use Phalcon\Cache\Frontend\Output;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
 use function Docs\Functions\app_path;
-use function Docs\Functions\config;
 
 /**
  * Docs\Providers\ViewCache\ServiceProvider
@@ -46,7 +45,7 @@ class ServiceProvider implements ServiceProviderInterface
             function () {
                 $lifetime = env('CACHE_LIFETIME', 3600);
                 $driver   = env('VIEW_CACHE_DRIVER', 'file');
-                $adapter = '\Phalcon\Cache\Backend\\' . ucfirst($driver);
+                $adapter  = '\Phalcon\Cache\Backend\\' . ucfirst($driver);
 
                 return new $adapter(
                     new Output(['lifetime' => $lifetime]),
