@@ -28,6 +28,7 @@ use const SORT_ASC;
 use const SORT_STRING;
 use function sprintf;
 use const PHP_EOL;
+use function sprintf;
 
 /**
  * GetLanguagesTask
