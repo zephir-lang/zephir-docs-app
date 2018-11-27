@@ -17,7 +17,7 @@
 
 namespace Docs\Providers\Config;
 
-use Docs\Config\Factory;
+use Phalcon\Config;
 use Phalcon\Di\ServiceProviderInterface;
 use Phalcon\DiInterface;
 use function Docs\Functions\config_path;
@@ -39,7 +39,8 @@ class ServiceProvider implements ServiceProviderInterface
         $container->setShared(
             'config',
             function () {
-                return Factory::create(config_path());
+                $config = require config_path('config.php');
+                return new Config($config);
             }
         );
     }

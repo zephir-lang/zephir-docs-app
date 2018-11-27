@@ -17,13 +17,14 @@
 
 namespace Docs\Cli\Tasks;
 
+use Phalcon\CLI\Task;
+use function asort;
 use function Docs\Functions\app_path;
 use function Docs\Functions\env;
 use function file_put_contents;
 use function json_decode;
-use Phalcon\CLI\Task;
-use const PHP_EOL;
 use function sprintf;
+use const PHP_EOL;
 
 /**
  * GetLanguagesTask
@@ -36,7 +37,7 @@ class GetLanguagesTask extends Task
     public function mainAction()
     {
         echo 'Getting Languages from Crowdin...' . PHP_EOL;
-        $template = 'https://api.crowdin.com/api/project/zephir-documentation/status?key=%s&json';
+        $template = 'https://api.crowdin.com/api/project/zephir-documentation/info?key=%s&json';
         $url      = sprintf($template, env('CROWDIN_API_KEY'), '');
 
         $handle = curl_init();
@@ -45,7 +46,7 @@ class GetLanguagesTask extends Task
         curl_setopt($handle, CURLOPT_POST, true);
         curl_setopt($handle, CURLOPT_POSTFIELDS, ['json' => 1]);
 
-        $fileName         = app_path('/storage/languages/languages.json');
+        $fileName         = app_path('/storage/crowdin/crowdin.json');
         $results          = curl_exec($handle);
         $errorNumber      = curl_errno($handle);
         $errorDescription = curl_error($handle);
@@ -56,18 +57,28 @@ class GetLanguagesTask extends Task
             echo $errorDescription . PHP_EOL;
         }
 
-        $languages = [
-            'en' => 'English',
-        ];
-        $data      = json_decode($results, true);
-        foreach ($data as $item) {
-            $code = $item['code'];
-            $text             = $item['name'];
-            $languages[$code] = $text;
+        $crowdin   = json_decode($results, true);
+        $languages = [];
+        foreach ($crowdin['languages'] as $language) {
+            $languages[$language['code']] = $language['name'];
+        }
+
+        $versions = [];
+        foreach ($crowdin['files'] as $file) {
+            if ('branch' === $file['node_type']) {
+                $versions[] = $file['name'];
+            }
         }
 
         asort($languages);
-        file_put_contents($fileName, json_encode($languages));
+        arsort($versions);
+
+        $data = [
+            'languages' => $languages,
+            'versions'  => $versions,
+        ];
+
+        file_put_contents($fileName, json_encode($data));
 
         echo 'Updated languages.' . PHP_EOL;
     }

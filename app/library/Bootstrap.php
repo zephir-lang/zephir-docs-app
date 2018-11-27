@@ -85,8 +85,8 @@ class Bootstrap
         $this->createInternalApplication();
         $this->container->setShared('app', $this->app);
 
-        /** @noinspection PhpIncludeInspection */
-        $providers = require config_path('providers.php');
+        $config    = require config_path('config.php');
+        $providers = $config['providers'];
         if (is_array($providers)) {
             $this->initializeServiceProviders($providers);
         }

@@ -31,7 +31,6 @@ run.config:
       - dom
       - json
       - mbstring
-      - phalcon
       - simplexml
       - tokenizer
       - xml
@@ -43,6 +42,9 @@ run.config:
         - xdebug
       rm:
         - opcache
+  extra_packages:
+    - php71-phalcon-3.3.2
   extra_steps:
-    - echo "alias phalcon=\'phalcon.php\'" >> /data/var/home/gonano/.bashrc
+    - echo 'extension=phalcon.so' >> "/data/etc/php/dev_php.ini"
+    - echo 'extension=phalcon.so' >> "/data/etc/php/prod_php.ini"
     - cp /app/storage/setup/xdebug.ini /data/etc/php.dev.d/xdebug.ini

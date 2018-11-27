@@ -2,6 +2,7 @@
 
 namespace Docs\Controllers;
 
+use Docs\Cli\Tasks\GetLanguagesTask;
 use Docs\Exception\HttpException;
 use Phalcon\Http\ResponseInterface;
 use Phalcon\Text;
@@ -25,25 +26,24 @@ class DocsController extends BaseController
      */
     public function mainAction(string $language = null, string $version = null, string $page = ''): ResponseInterface
     {
-        if (empty($language)) {
+        $checkedLanguage = $this->getLanguage($language);
+        if ($checkedLanguage !== $language) {
             return $this->response->redirect(base_url($this->getVersion('/en/')));
         }
 
-        $language = $this->getLanguage($language);
-
-        if (true === empty($version) || 'latest' === $version) {
+        $checkVersion = $this->getVersion('', $version);
+        if ($checkVersion !== $version) {
             $suffix = '';
             if (true !== empty($page)) {
                 $suffix = '/' . $page;
             }
+
             return $this->response->redirect(
                 base_url(
                     $this->getVersion('/' . $language . '/') . $suffix
                 )
             );
         }
-
-        $version = $this->getVersion('', $version);
 
         $renderFile = 'index/article';
         if (empty($page)) {
