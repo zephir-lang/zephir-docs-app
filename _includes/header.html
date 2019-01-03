@@ -1,0 +1,111 @@
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2"
+               href="{{ site.url }}"
+               aria-label="{{ site.app.title }}">
+                <img class="bd-brand-logos" src="https://assets.phalconphp.com/zephir/logo.png">
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{{ site.url }}/">
+                        {{ site.app.title }} v{{ page.version }}
+                    </a>
+                  </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <!-- Languages -->
+                <li class="nav-item dropdown">
+                    <a class="nav-item nav-link dropdown-toggle mr-md-2"
+                       href="/{{ page.version }}/{{ page.language }}"
+                       id="bd-languages"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        <img class="no-shadow lang-image"
+                             src="https://d2srrzh48sp2nh.cloudfront.net/31cd209e/images/flags/{{ site.data.supported[page.language].crowdin_code }}.png">
+                        {{ site.data.supported[page.language].name | strip }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-languages">
+                        {% for lang in site.app.languages %}
+                        {% if site.data.supported[lang].name %}
+                        <a class="dropdown-item{% if lang == page.language %} active {% endif %}"
+                           href="/{{ page.version }}/{{ lang }}/{{ script }}">
+                            <img class="no-shadow lang-image"
+                                 src="https://d2srrzh48sp2nh.cloudfront.net/31cd209e/images/flags/{{ site.data.supported[lang].crowdin_code }}.png">
+                            {{ site.data.supported[lang].name | strip }}
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+
+                <!-- Versions -->
+                <li class="nav-item dropdown">
+                    <a class="nav-item nav-link dropdown-toggle mr-md-2"
+                       href="/{{ page.version }}/{{ page.language }}"
+                       id="bd-versions"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        {{ page.version }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                        {% for ver in site.app.versions %}
+                        <a class="dropdown-item{% if ver == page.version %} active {% endif %}"
+                           href="/{{ ver }}/{{ page.language }}/{{ script }}">{{ ver }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+
+                <!-- Social Icons -->
+                <li class="nav-item">
+                    <a class="nav-link p-2"
+                       href="https://phalcon.link/github"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2"
+                       href="https://phalcon.link/f"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2"
+                       href="https://"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2"
+                       href="https://phalcon.link/discord"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>

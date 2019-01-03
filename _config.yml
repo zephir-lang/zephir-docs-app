@@ -1,0 +1,52 @@
+app:
+  title: 'Zephir Documentation'
+  name: 'Zephir Documentation'
+  author: 'Zephir Language Team'
+  description: 'Zephir is an open source, high-level/domain specific language designed to ease the creation and maintainability of extensions for PHP with a focus on type and memory safety'
+  keywords: 'zephir, language, documentation, php, domain specific language, php extensions, open source'
+  avatar: 'https://avatars3.githubusercontent.com/u/1221505?v=4'
+  email: 'team@phalconphp.com'
+  facebook:
+  github: 'phalcon'
+  rss: 'phalcon'
+  twitter: 'zephirlang'
+  analytics: ''
+  language: 'en'
+  version: '0.11'
+  versions: [
+    '0.11',
+    '0.10'
+  ]
+  languages: [
+    'en',
+    'zh-CN',
+    'el-GR',
+    'ru-RU',
+    'es-ES',
+    'uk-UA'
+  ]
+
+include:
+  - 0.11
+  - 0.10
+  - _redirects
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+exclude:
+  - 0.11/crowdin.yml
+  - 0.11/README.md
+  - 0.10/crowdin.yml
+  - 0.10/README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+
+
