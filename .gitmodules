@@ -1,0 +1,8 @@
+[submodule "0.10"]
+	path = 0.10
+	url = https://github.com/phalcon/zephir-docs
+	branch = 0.10
+[submodule "0.11"]
+	path = 0.11
+	url = https://github.com/phalcon/zephir-docs
+	branch = 0.11
