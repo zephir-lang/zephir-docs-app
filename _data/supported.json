@@ -472,7 +472,7 @@
     "osx_code": "ny.lproj",
     "osx_locale": "ny"
   },
-  "zh-CN": {
+  "zh-cn": {
     "name": "Chinese Simplified",
     "crowdin_code": "zh-CN",
     "editor_code": "zhcn",
@@ -1264,7 +1264,7 @@
     "osx_code": "got.lproj",
     "osx_locale": "got"
   },
-  "el-GR": {
+  "el-gr": {
     "name": "Greek",
     "crowdin_code": "el",
     "editor_code": "el",
@@ -2430,7 +2430,7 @@
     "osx_code": "rn.lproj",
     "osx_locale": "rn"
   },
-  "ru-RU": {
+  "ru-ru": {
     "name": "Russian",
     "crowdin_code": "ru",
     "editor_code": "ru",
@@ -2738,7 +2738,7 @@
     "osx_code": "st.lproj",
     "osx_locale": "st"
   },
-  "es-ES": {
+  "es-es": {
     "name": "Spanish",
     "crowdin_code": "es-ES",
     "editor_code": "es",
@@ -3222,7 +3222,7 @@
     "osx_code": "tk.lproj",
     "osx_locale": "tk"
   },
-  "uk-UA": {
+  "uk-ua": {
     "name": "Ukrainian",
     "crowdin_code": "uk",
     "editor_code": "uk",
