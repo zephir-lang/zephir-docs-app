@@ -1,6 +1,22 @@
 /                                    /0.11/en/welcome
 /0.11                                /0.11/en/welcome
+/0.11/el-GR                          /0.11/el-GR/welcome
+/0.11/es-ES                          /0.11/es-ES/welcome
+/0.11/ru-RU                          /0.11/ru-RU/welcome
+/0.11/uk-UA                          /0.11/uk-UA/welcome
+/0.11/zh-CN                          /0.11/zh-CN/welcome
 /0.10                                /0.10/en/welcome
+/0.10/el-GR                          /0.10/el-GR/welcome
+/0.10/es-ES                          /0.10/es-ES/welcome
+/0.10/ru-RU                          /0.10/ru-RU/welcome
+/0.10/uk-UA                          /0.10/uk-UA/welcome
+/0.10/zh-CN                          /0.10/zh-CN/welcome
+/latest                              /latest/en/welcome
+/latest/el-GR                        /latest/el-GR/welcome
+/latest/es-ES                        /latest/es-ES/welcome
+/latest/ru-RU                        /latest/ru-RU/welcome
+/latest/uk-UA                        /latest/uk-UA/welcome
+/latest/zh-CN                        /latest/zh-CN/welcome
 
 /el/0.10/                            /0.10/el-GR/welcome
 /el/0.10/arrays                      /0.10/el-GR/arrays
