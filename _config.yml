@@ -19,11 +19,11 @@ app:
   ]
   languages: [
     'en',
-    'zh-CN',
-    'el-GR',
-    'ru-RU',
-    'es-ES',
-    'uk-UA'
+    'zh-cn',
+    'el-gr',
+    'ru-ru',
+    'es-es',
+    'uk-ua'
   ]
 
 include:
