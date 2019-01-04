@@ -13,15 +13,15 @@ From: Kyiv, Ukraine
 /* THANKS */
 
 Thanks to all our translators!
-For more see: https://crowdin.com/project/zephir-website
+For more see: https://crowdin.com/project/zephir-documentation
 
 Now that you're here, why not start contributing as well? :)
 
 /* SITE */
 
-Last update: 2018/12/08
+Last update: 2019/01/04
 Language: Jekyll
 Doctype: HTML5
 Standards: HTML5, CSS3
-Components: Twitter Bootstrap, jQuery, Google Fonts, highlight.js
+Components: Twitter Bootstrap, jQuery, Google Fonts, highlight.js, Algolia, Crowdin, Netlify
 
