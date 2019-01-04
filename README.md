@@ -1,8 +1,8 @@
-# Zephir - Web site source
+# Zephir - Documentation site source
 
-This is the official web site source code. The site is leveraging Jekyll and is deployed to [Netlify](https://app.netlify.com)
+This is the official documentation site source code. The site is leveraging Jekyll and is deployed to [Netlify](https://app.netlify.com)
 
-If you are interested in translating our main website, you can visit [our project in Crowdin](https://crowdin.com/project/zephir-documentation).
+If you are interested in translating our documents, you can visit [our project in Crowdin](https://crowdin.com/project/zephir-documentation).
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/zephir-documentation/localized.svg)](https://crowdin.com/project/zephir-documentation)
 
@@ -13,4 +13,8 @@ This project is open-sourced software licensed under the MIT License. See the LI
 
 ## Thank you
 
-A big thank you to [Netlify](https://app.netlify.com), [Crowdin](https://crowdin.com), all of our supporters and users!
+A big thank you to:
+- [Netlify](https://app.netlify.com) for hosting the site
+- [Crowdin](https://crowdin.com) for offering translation services
+- [Algolia](https://www.algolia.com) for offering search services for our documentation
+- All of our supporters and users!
