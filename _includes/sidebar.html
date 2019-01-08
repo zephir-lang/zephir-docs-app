@@ -1,20 +1,12 @@
             <nav class="collapse bd-links" id="bd-docs-nav">
                 <div class="bd-toc-item active">
                     <ul class="nav bd-sidenav">
-                        {% for menuPage in site.pages %}
-                        {% if
-                            'sidebar.md' == menuPage.name and
-                            page.language == menuPage.language and
-                            page.version == menuPage.version
-                        %}
-                        {% for menu in menuPage.menu %}
+                        {% for sideMenu in site.data[sidebarIndex] %}
                         <li class="toc-entry toc-h2">
-                            <a href="/{{ menuPage.version }}/{{ menuPage.language }}/{{ menu.url }}">
-                                {{ menu.text }}
+                            <a href="/{{ page.version }}/{{ page.language }}/{{ sideMenu.url }}">
+                                {{ sideMenu.text }}
                             </a>
                         </li>
-                        {% endfor %}
-                        {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

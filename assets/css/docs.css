@@ -962,7 +962,6 @@ body {
 .bd-brand-logos {
     display: table;
     width: 100%;
-    margin-bottom: 1rem;
     overflow: hidden;
     color: #6f5499;
     background-color: #f9f9f9;
@@ -1636,4 +1635,30 @@ body {
 
 .lang-image {
     width: 20px;
+}
+
+/**
+ Bullets for the menu based on level
+ */
+.right-menu {
+    list-style-type: none;
+}
+
+.level-1 {
+    margin-left: 0;
+}
+.level-2 {
+    margin-left: 10px;
+}
+.level-3 {
+    margin-left: 20px;
+}
+.level-4 {
+    margin-left: 30px;
+}
+.level-5 {
+    margin-left: 40px;
+}
+.level-6 {
+    margin-left: 50px;
 }

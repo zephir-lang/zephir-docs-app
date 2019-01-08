@@ -2,6 +2,10 @@
 <html lang="{{ page.language | default: en }}">
 {% assign script = page.name | replace: '.md', '' %}
 {% assign url = page.url | replace: '.html', '' %}
+{% assign keyPrefix = page.version | replace: '.', '-' | prepend: '-' | prepend: page.language %}
+{% assign sidebarIndex = '-sidebar' | prepend: keyPrefix %}
+{% assign rightMenuKey = '-right-menu' | prepend: keyPrefix %}
+
 {% include head.html %}
 
 <body>
@@ -14,24 +18,14 @@
             {% include sidebar.html %}
         </div>
         <div class="d-none d-xl-block col-xl-2 bd-toc">
-            {% if page.menu %}
+            {% assign rightMenu = site.data[rightMenuKey] %}
+            {% if rightMenu[script] %}
             <ul class="section-nav">
-                {% for menu in page.menu %}
-                <li class="toc-entry toc-h2">
-                    <a href="{{ menu.url }}">
-                        {{ menu.text }}
+                {% for rightMenuPage in rightMenu[script] %}
+                <li class="toc-entry toc-h2 level-{{ rightMenuPage.level }}">
+                    <a href="{{ rightMenuPage.url }}">
+                        {{ rightMenuPage.text }}
                     </a>
-                    {% if menu.sub %}
-                    <ul class="section-nav">
-                        {% for subMenu in menu.sub %}
-                        <li class="toc-entry toc-h2">
-                            <a href="{{ subMenu.url }}">
-                                {{ subMenu.text }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>
