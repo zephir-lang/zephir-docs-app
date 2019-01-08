@@ -962,7 +962,6 @@ body {
 .bd-brand-logos {
     display: table;
     width: 100%;
-    margin-bottom: 1rem;
     overflow: hidden;
     color: #6f5499;
     background-color: #f9f9f9;
