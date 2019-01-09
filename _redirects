@@ -63,6 +63,10 @@
 /el/latest/                          /0.11/el-gr/welcome
 /el/latest/*                         /0.11/el-gr/:splat
 /en/latest/                          /0.11/en/welcome
+/en/latest/genindex.html             /0.11/en/welcome
+/en/latest/arrays.html               /0.11/en/arrays
+/en/latest/install.html              /0.11/en/installation
+/en/latest/_sources/oop.txt          /0.11/en/oop
 /en/latest/*                         /0.11/en/:splat
 /es/latest/                          /0.11/es-es/welcome
 /es/latest/*                         /0.11/es-es/:splat
@@ -72,4 +76,3 @@
 /uk/latest/*                         /0.11/uk-ua/:splat
 /zh/latest/                          /0.11/zh-cn/welcome
 /zh/latest/*                         /0.11/zh-cn/:splat
-
