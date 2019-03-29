@@ -23,6 +23,7 @@ app:
     'el-gr',
     'ru-ru',
     'es-es',
+    'tr-tr',
     'uk-ua'
   ]
 
