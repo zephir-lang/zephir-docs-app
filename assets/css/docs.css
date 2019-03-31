@@ -256,8 +256,8 @@ body {
     .bd-toc {
         position: -webkit-sticky;
         position: sticky;
-        top: 4rem;
-        height: calc(100vh - 4rem);
+        top: 0;
+        height: calc(100vh);
         overflow-y: auto
     }
 }
