@@ -257,8 +257,8 @@ body {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        height: calc(100vh);
-        overflow-y: auto
+        height: 100vh;
+        overflow-y: auto;
     }
 }
 
@@ -307,7 +307,7 @@ body {
             position: sticky;
             top: 0;
             z-index: 1000;
-            height: calc(100vh)
+            height: 100vh;
         }
     }
 }
