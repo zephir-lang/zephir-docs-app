@@ -305,9 +305,9 @@ body {
         .bd-sidebar {
             position: -webkit-sticky;
             position: sticky;
-            top: 4rem;
+            top: 0;
             z-index: 1000;
-            height: calc(100vh - 4rem)
+            height: calc(100vh)
         }
     }
 }
