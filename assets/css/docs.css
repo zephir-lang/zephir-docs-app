@@ -308,6 +308,7 @@ body {
             top: 0;
             z-index: 1000;
             height: 100vh;
+            overflow-y: hidden;
         }
     }
 }
@@ -329,7 +330,7 @@ body {
 @media (min-width: 768px) {
     @supports ((position:-webkit-sticky) or (position:sticky)) {
         .bd-links {
-            max-height: calc(100vh - 9rem);
+            max-height: calc(100vh - 72px);
             overflow-y: auto
         }
     }
