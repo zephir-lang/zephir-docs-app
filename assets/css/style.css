@@ -1670,3 +1670,7 @@ body {
     }
 }
 
+.algolia-autocomplete {
+    width: 100%;
+}
+
