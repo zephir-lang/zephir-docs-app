@@ -11,8 +11,8 @@ body {
 
 @media (max-width: 991.98px) {
     .bd-navbar {
-        padding-right: .5rem;
-        padding-left: .5rem
+        padding-right: 1rem;
+        padding-left: 1rem
     }
 
     .bd-navbar .navbar-nav-scroll {
