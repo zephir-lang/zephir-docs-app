@@ -1677,3 +1677,8 @@ body {
     width: 100%;
 }
 
+.navbar-nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
