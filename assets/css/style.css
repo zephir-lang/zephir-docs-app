@@ -67,7 +67,9 @@ body {
 }
 
 .bd-navbar .dropdown-menu {
-    font-size: .875rem
+    font-size: .875rem;
+    position: absolute;
+    left: 0;
 }
 
 .bd-navbar .dropdown-item.active {
