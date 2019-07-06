@@ -1684,3 +1684,7 @@ body {
     flex-wrap: wrap;
 }
 
+.dropdown-menu {
+    min-width: 5rem;
+}
+
