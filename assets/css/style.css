@@ -1688,3 +1688,7 @@ body {
     min-width: 5rem;
 }
 
+.nav-item--lang .dropdown-menu {
+    min-width: 14rem;
+}
+
