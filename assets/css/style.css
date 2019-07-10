@@ -438,12 +438,6 @@ body {
     margin-bottom: 0
 }
 
-@media (min-width: 576px) {
-    .bd-footer {
-        text-align: left
-    }
-}
-
 .bd-footer-links {
     padding-left: 0;
     margin-bottom: 1rem
