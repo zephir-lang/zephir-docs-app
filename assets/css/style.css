@@ -361,7 +361,8 @@ body {
 
 .bd-search-docs-toggle {
     line-height: 1;
-    color: #212529
+    color: #212529;
+    border: 1px solid #ced4da;
 }
 
 .bd-sidenav {
