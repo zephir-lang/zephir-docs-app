@@ -7,3 +7,7 @@ k
 	path = 0.11
 	url = https://github.com/zephir-lang/zephir-docs
 	branch = 0.11
+[submodule "0.12"]
+	path = 0.12
+	url = https://github.com/zephir-lang/zephir-docs
+	branch = 0.12
