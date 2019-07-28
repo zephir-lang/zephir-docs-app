@@ -12,8 +12,9 @@ app:
   twitter: 'zephirlang'
   analytics: ''
   language: 'en'
-  version: '0.11'
+  version: '0.12'
   versions: [
+    '0.12',
     '0.11',
     '0.10'
   ]
@@ -28,6 +29,7 @@ app:
   ]
 
 include:
+  - 0.12
   - 0.11
   - 0.10
   - _redirects
