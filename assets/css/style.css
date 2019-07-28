@@ -1,8 +1,11 @@
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#2b2b2b}.hljs{color:#bababa}.hljs-strong,.hljs-emphasis{color:#a8a8a2}.hljs-bullet,.hljs-quote,.hljs-link,.hljs-number,.hljs-regexp,.hljs-literal{color:#6896ba}.hljs-code,.hljs-selector-class{color:#a6e22e}.hljs-emphasis{font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-section,.hljs-attribute,.hljs-name,.hljs-variable{color:#cb7832}.hljs-params{color:#b9b9b9}.hljs-string{color:#6a8759}.hljs-subst,.hljs-type,.hljs-built_in,.hljs-builtin-name,.hljs-symbol,.hljs-selector-id,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-template-tag,.hljs-template-variable,.hljs-addition{color:#e0c46c}.hljs-comment,.hljs-deletion,.hljs-meta{color:#7f7f7f}
+
 body {
     font-family: Merriweather, "EB Garamond", Georgia, serifbody;
 }
 
 .bd-navbar {
+    position: relative;
     min-height: 4rem;
     background-color: #6f5499;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1)
@@ -10,8 +13,8 @@ body {
 
 @media (max-width: 991.98px) {
     .bd-navbar {
-        padding-right: .5rem;
-        padding-left: .5rem
+        padding-right: 1rem;
+        padding-left: 1rem
     }
 
     .bd-navbar .navbar-nav-scroll {
@@ -64,7 +67,9 @@ body {
 }
 
 .bd-navbar .dropdown-menu {
-    font-size: .875rem
+    font-size: .875rem;
+    position: absolute;
+    left: 0;
 }
 
 .bd-navbar .dropdown-item.active {
@@ -356,7 +361,8 @@ body {
 
 .bd-search-docs-toggle {
     line-height: 1;
-    color: #212529
+    color: #212529;
+    border: 1px solid #ced4da;
 }
 
 .bd-sidenav {
@@ -397,7 +403,7 @@ body {
 
 .bd-sidebar .nav > li > a {
     display: block;
-    padding: .25rem 1.5rem;
+    padding: .25rem 1rem;
     font-size: 90%;
     color: rgba(0, 0, 0, .65)
 }
@@ -431,12 +437,6 @@ body {
 
 .bd-footer p {
     margin-bottom: 0
-}
-
-@media (min-width: 576px) {
-    .bd-footer {
-        text-align: left
-    }
 }
 
 .bd-footer-links {
@@ -1662,3 +1662,28 @@ body {
 .level-6 {
     margin-left: 50px;
 }
+
+@media (max-width: 576px) {
+    .algolia-autocomplete .ds-dropdown-menu {
+        width: 100%;
+        min-width: 100% !important;
+    }
+}
+
+.algolia-autocomplete {
+    width: 100%;
+}
+
+.navbar-nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.dropdown-menu {
+    min-width: 5rem;
+}
+
+.nav-item--lang .dropdown-menu {
+    min-width: 14rem;
+}
+
