@@ -1,8 +1,11 @@
 # Root folder to latest version
-/                                    /0.11/en/welcome
-/latest                              /0.11/en/welcome
+/                                    /0.12/en/welcome
+/latest                              /0.12/en/welcome
 
 # No URL points to welcome
+/0.12                                /0.12/en/welcome
+/0.12/:lang                          /0.12/:lang/welcome
+
 /0.11                                /0.11/en/welcome
 /0.11/el-gr                          /0.11/el-gr/welcome
 /0.11/es-es                          /0.11/es-es/welcome
