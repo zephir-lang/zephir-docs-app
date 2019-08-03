@@ -40,6 +40,8 @@ kramdown:
     disable: true
 
 exclude:
+  - 0.12/crowdin.yml
+  - 0.12/README.md
   - 0.11/crowdin.yml
   - 0.11/README.md
   - 0.10/crowdin.yml
