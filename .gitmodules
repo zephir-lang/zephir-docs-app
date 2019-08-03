@@ -1,4 +1,3 @@
-k
 [submodule "0.10"]
 	path = 0.10
 	url = https://github.com/zephir-lang/zephir-docs
