@@ -19,6 +19,8 @@ And wait for load any required submodules. After that, we need a few ruby depend
 
 ```sh
 $ bundle install
+$ ./prebuild.sh
+$ jekyll build
 ```
 
 Then, from the root of the blog just run:
@@ -34,6 +36,8 @@ For git 1.6.1 or above you can use something similar to:
 ```sh
 $ cd zephir-docs-app
 $ git submodule update --remote --merge
+$ ./prebuild.sh
+$ jekyll build
 ```
 
 See [git-submodule(1)](http://www.kernel.org/pub/software/scm/git/docs/v1.6.1.3/git-submodule.html) for details.
