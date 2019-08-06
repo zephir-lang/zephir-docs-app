@@ -1687,3 +1687,7 @@ body {
     min-width: 14rem;
 }
 
+.btn-link:hover {
+    border-color: #ced4da;
+}
+
