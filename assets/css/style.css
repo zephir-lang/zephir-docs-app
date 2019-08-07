@@ -1689,6 +1689,7 @@ body {
 
 .btn-link:hover {
     border-color: #ced4da;
+    color: #212529;
 }
 
 .btn-link:focus {
