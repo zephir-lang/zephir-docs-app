@@ -1687,6 +1687,10 @@ body {
     min-width: 14rem;
 }
 
+.btn-link {
+    padding: .25rem .75rem;
+}
+
 .btn-link:hover {
     border-color: #ced4da;
     color: #212529;
