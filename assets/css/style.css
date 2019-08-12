@@ -1701,3 +1701,7 @@ body {
     border-color: #ced4da;
 }
 
+.form-control {
+    height: calc(2.25rem + 4px);
+}
+
