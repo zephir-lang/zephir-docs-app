@@ -1670,6 +1670,11 @@ body {
         width: 100%;
         min-width: 100% !important;
     }
+
+    .navbar-nav {
+        margin-left: -.5rem;
+        margin-right: -.5rem;
+    }
 }
 
 .algolia-autocomplete {
