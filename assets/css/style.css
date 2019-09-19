@@ -1705,6 +1705,8 @@ body {
 
 .btn-link:focus {
     border-color: #ced4da;
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .form-control {
