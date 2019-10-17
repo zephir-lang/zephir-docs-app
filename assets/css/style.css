@@ -968,6 +968,11 @@ body {
     border-radius: .25rem;
     width: 40px;
     padding: .2rem;
+    margin-right: 10px;
+}
+
+.bd-brand-logos span {
+    font-size: 1rem;
 }
 
 .bd-brand-item {
@@ -1711,5 +1716,10 @@ body {
 
 .form-control {
     height: calc(2.25rem + 4px);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 

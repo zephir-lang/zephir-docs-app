@@ -4,6 +4,7 @@
                href="{{ site.url }}"
                aria-label="{{ site.app.title }}">
                 <img class="bd-brand-logos" src="https://assets.phalconphp.com/zephir/logo.png" alt="Zephir">
+                <span>{{ site.app.title }} v{{ page.version }}</span>
             </a>
             <button class="navbar-toggler"
                     type="button"
@@ -15,13 +16,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="{{ site.url }}/">
-                        {{ site.app.title }} v{{ page.version }}
-                    </a>
-                  </li>
-                </ul>
                 <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
                     <!-- Languages -->
                     <li class="nav-item dropdown nav-item--lang">
