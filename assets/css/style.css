@@ -971,7 +971,7 @@ body {
     margin-right: 10px;
 }
 
-.bd-brand-logos span {
+.navbar-brand span {
     font-size: 1rem;
 }
 
@@ -1721,5 +1721,6 @@ body {
 .navbar-brand {
     display: flex;
     align-items: center;
+    margin-right: 0;
 }
 
