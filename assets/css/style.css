@@ -6,6 +6,8 @@ body {
 
 .bd-navbar {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     min-height: 4rem;
     background-color: #6f5499;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1)
