@@ -1677,20 +1677,10 @@ body {
         width: 100%;
         min-width: 100% !important;
     }
-
-    .navbar-nav {
-        margin-left: -.5rem;
-        margin-right: -.5rem;
-    }
 }
 
 .algolia-autocomplete {
     width: 100%;
-}
-
-.navbar-nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
 }
 
 .dropdown-menu {
@@ -1724,5 +1714,12 @@ body {
     display: flex;
     align-items: center;
     margin-right: 0;
+}
+
+.navbar-nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
 }
 
