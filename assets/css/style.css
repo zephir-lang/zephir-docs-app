@@ -327,8 +327,6 @@ body {
 }
 
 .bd-links {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     margin-right: -15px;
     margin-left: -15px
 }
@@ -344,7 +342,16 @@ body {
 
 @media (min-width: 768px) {
     .bd-links {
-        display: block !important
+        display: block !important;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .bd-links {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
