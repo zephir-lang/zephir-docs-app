@@ -56,7 +56,7 @@ See [git-submodule(1)](http://www.kernel.org/pub/software/scm/git/docs/v1.6.1.3/
 
 ## License
 
-This project is open-sourced software licensed under the MIT License. See the LICENSE file for more information.
+This project is open-sourced software licensed under the MIT License. See the [LICENSE](https://github.com/zephir-lang/zephir-docs-app/blob/master/LICENSE) file for more information.
 © Zephir Team and contributors
 
 ## Thank you
