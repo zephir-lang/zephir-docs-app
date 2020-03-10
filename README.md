@@ -52,7 +52,7 @@ $ ./prebuild.sh
 $ bundle exec jekyll build
 ```
 
-See [git-submodule(1)](http://www.kernel.org/pub/software/scm/git/docs/v1.6.1.3/git-submodule.html) for details.
+See [git-submodule(1)](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-submodule.html) for details.
 
 ## License
 
