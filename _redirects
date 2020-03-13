@@ -1,81 +1,81 @@
-# Root folder to latest version
-/                                    /0.12/en/welcome
-/latest                              /0.12/en/welcome
-
-# No URL points to welcome
-/0.12                                /0.12/en/welcome
-/0.12/:lang                          /0.12/:lang/welcome
-
-/0.11                                /0.11/en/welcome
-/0.11/el-gr                          /0.11/el-gr/welcome
-/0.11/es-es                          /0.11/es-es/welcome
-/0.11/ru-ru                          /0.11/ru-ru/welcome
-/0.11/uk-ua                          /0.11/uk-ua/welcome
-/0.11/zh-cn                          /0.11/zh-cn/welcome
-
-/0.10                                /0.10/en/welcome
-/0.10/el-gr                          /0.10/el-gr/welcome
-/0.10/es-es                          /0.10/es-es/welcome
-/0.10/ru-ru                          /0.10/ru-ru/welcome
-/0.10/uk-ua                          /0.10/uk-ua/welcome
-/0.10/zh-cn                          /0.10/zh-cn/welcome
-
-# Latest mapping to latest version
-/latest/el-gr/                       /0.11/el-gr/welcome
-/latest/el-gr/*                      /0.11/el-gr/:splat
-/latest/en/                          /0.11/en/welcome
-/latest/en/*                         /0.11/en/:splat
-/latest/es-es/                       /0.11/es-es-es/welcome
-/latest/es-es/*                      /0.11/es-es-es/:splat
-/latest/ru-ru/                       /0.11/ru-ru/welcome
-/latest/ru-ru/*                      /0.11/ru-ru/:splat
-/latest/uk-ua/                       /0.11/uk-ua/welcome
-/latest/uk-ua/*                      /0.11/uk-ua/:splat
-/latest/zh-cn/                       /0.11/zh-cn/welcome
-/latest/zh-cn/*                      /0.11/zh-cn/:splat
-
-# Old version structure to new one 0.10
-/el/0.10/                            /0.10/el-gr/welcome
-/el/0.10/*                           /0.10/el-gr/:splat
-/en/0.10/                            /0.10/en/welcome
-/en/0.10/*                           /0.10/en/:splat
-/es/0.10/                            /0.10/es-es/welcome
-/es/0.10/*                           /0.10/es-es/:splat
-/ru/0.10/                            /0.10/ru-ru/welcome
-/ru/0.10/*                           /0.10/ru-ru/:splat
-/uk/0.10/                            /0.10/uk-ua/welcome
-/uk/0.10/*                           /0.10/uk-ua/:splat
-/zh/0.10/                            /0.10/zh-cn/welcome
-/zh/0.10/*                           /0.10/zh-cn/:splat
-
-# Old version structure to new one 0.11
-/el/0.11/                            /0.11/el-gr/welcome
-/el/0.11/*                           /0.11/el-gr/:splat
-/en/0.11/                            /0.11/en/welcome
-/en/0.11/*                           /0.11/en/:splat
-/es/0.11/                            /0.11/es-es/welcome
-/es/0.11/*                           /0.11/es-es/:splat
-/ru/0.11/                            /0.11/ru-ru/welcome
-/ru/0.11/*                           /0.11/ru-ru/:splat
-/uk/0.11/                            /0.11/uk-ua/welcome
-/uk/0.11/*                           /0.11/uk-ua/:splat
-/zh/0.11/                            /0.11/zh-cn/welcome
-/zh/0.11/*                           /0.11/zh-cn/:splat
-
-# Old "latest" version to new one
-/el/latest/                          /0.11/el-gr/welcome
-/el/latest/*                         /0.11/el-gr/:splat
-/en/latest/                          /0.11/en/welcome
-/en/latest/genindex.html             /0.11/en/welcome
-/en/latest/arrays.html               /0.11/en/arrays
-/en/latest/install.html              /0.11/en/installation
-/en/latest/_sources/oop.txt          /0.11/en/oop
-/en/latest/*                         /0.11/en/:splat
-/es/latest/                          /0.11/es-es/welcome
-/es/latest/*                         /0.11/es-es/:splat
-/ru/latest/                          /0.11/ru-ru/welcome
-/ru/latest/*                         /0.11/ru-ru/:splat
-/uk/latest/                          /0.11/uk-ua/welcome
-/uk/latest/*                         /0.11/uk-ua/:splat
-/zh/latest/                          /0.11/zh-cn/welcome
-/zh/latest/*                         /0.11/zh-cn/:splat
+# Root folder to latest version                               
+/                                    /0.12/en/welcome          301!
+/latest                              /0.12/en/welcome          301!
+                                                              
+# No URL points to welcome                                    
+/0.12                                /0.12/en/welcome          301!
+/0.12/:lang                          /0.12/:lang/welcome       301!
+                                                              
+/0.11                                /0.11/en/welcome          301!
+/0.11/el-gr                          /0.11/el-gr/welcome       301!
+/0.11/es-es                          /0.11/es-es/welcome       301!
+/0.11/ru-ru                          /0.11/ru-ru/welcome       301!
+/0.11/uk-ua                          /0.11/uk-ua/welcome       301!
+/0.11/zh-cn                          /0.11/zh-cn/welcome       301!
+                                                              
+/0.10                                /0.10/en/welcome          301!
+/0.10/el-gr                          /0.10/el-gr/welcome       301!
+/0.10/es-es                          /0.10/es-es/welcome       301!
+/0.10/ru-ru                          /0.10/ru-ru/welcome       301!
+/0.10/uk-ua                          /0.10/uk-ua/welcome       301!
+/0.10/zh-cn                          /0.10/zh-cn/welcome       301!
+                                                              
+# Latest mapping to latest version                            
+/latest/el-gr/                       /0.11/el-gr/welcome       301!
+/latest/el-gr/*                      /0.11/el-gr/:splat        301!
+/latest/en/                          /0.11/en/welcome          301!
+/latest/en/*                         /0.11/en/:splat           301!
+/latest/es-es/                       /0.11/es-es-es/welcome    301!
+/latest/es-es/*                      /0.11/es-es-es/:splat     301!
+/latest/ru-ru/                       /0.11/ru-ru/welcome       301!
+/latest/ru-ru/*                      /0.11/ru-ru/:splat        301!
+/latest/uk-ua/                       /0.11/uk-ua/welcome       301!
+/latest/uk-ua/*                      /0.11/uk-ua/:splat        301!
+/latest/zh-cn/                       /0.11/zh-cn/welcome       301!
+/latest/zh-cn/*                      /0.11/zh-cn/:splat        301!
+                                                           
+# Old version structure to new one 0.10                    
+/el/0.10/                            /0.10/el-gr/welcome       301!
+/el/0.10/*                           /0.10/el-gr/:splat        301!
+/en/0.10/                            /0.10/en/welcome          301!
+/en/0.10/*                           /0.10/en/:splat           301!
+/es/0.10/                            /0.10/es-es/welcome       301!
+/es/0.10/*                           /0.10/es-es/:splat        301!
+/ru/0.10/                            /0.10/ru-ru/welcome       301!
+/ru/0.10/*                           /0.10/ru-ru/:splat        301!
+/uk/0.10/                            /0.10/uk-ua/welcome       301!
+/uk/0.10/*                           /0.10/uk-ua/:splat        301!
+/zh/0.10/                            /0.10/zh-cn/welcome       301!
+/zh/0.10/*                           /0.10/zh-cn/:splat        301!
+                                                           
+# Old version structure to new one 0.11                    
+/el/0.11/                            /0.11/el-gr/welcome       301!
+/el/0.11/*                           /0.11/el-gr/:splat        301!
+/en/0.11/                            /0.11/en/welcome          301!
+/en/0.11/*                           /0.11/en/:splat           301!
+/es/0.11/                            /0.11/es-es/welcome       301!
+/es/0.11/*                           /0.11/es-es/:splat        301!
+/ru/0.11/                            /0.11/ru-ru/welcome       301!
+/ru/0.11/*                           /0.11/ru-ru/:splat        301!
+/uk/0.11/                            /0.11/uk-ua/welcome       301!
+/uk/0.11/*                           /0.11/uk-ua/:splat        301!
+/zh/0.11/                            /0.11/zh-cn/welcome       301!
+/zh/0.11/*                           /0.11/zh-cn/:splat        301!
+                                                           
+# Old "latest" version to new one                          
+/el/latest/                          /0.11/el-gr/welcome       301!
+/el/latest/*                         /0.11/el-gr/:splat        301!
+/en/latest/                          /0.11/en/welcome          301!
+/en/latest/genindex.html             /0.11/en/welcome          301!
+/en/latest/arrays.html               /0.11/en/arrays           301!
+/en/latest/install.html              /0.11/en/installation     301!
+/en/latest/_sources/oop.txt          /0.11/en/oop              301!
+/en/latest/*                         /0.11/en/:splat           301!
+/es/latest/                          /0.11/es-es/welcome       301!
+/es/latest/*                         /0.11/es-es/:splat        301!
+/ru/latest/                          /0.11/ru-ru/welcome       301!
+/ru/latest/*                         /0.11/ru-ru/:splat        301!
+/uk/latest/                          /0.11/uk-ua/welcome       301!
+/uk/latest/*                         /0.11/uk-ua/:splat        301!
+/zh/latest/                          /0.11/zh-cn/welcome       301!
+/zh/latest/*                         /0.11/zh-cn/:splat        301!
