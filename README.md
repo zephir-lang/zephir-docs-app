@@ -1,6 +1,8 @@
-<p align="center"><a href="https://zephir-lang.com/" target="_blank">
-    <img src="https://assets.phalcon.io/zephir/zephir_logo-105x36.svg" height="100" alt="Phalcon"/>
-</a></p>
+<p align="center">
+    <a href="https://zephir-lang.com/" target="_blank">
+        <img src="https://assets.phalcon.io/zephir/zephir_logo-105x36.svg" height="100" alt="Phalcon"/>
+    </a>
+</p>
 
 <p align="center">
     Hosting by:
