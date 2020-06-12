@@ -145,6 +145,10 @@ body {
     order: 1
 }
 
+.bd-content img {
+    max-width: 100%;
+}
+
 .bd-content > h2[id], .bd-content > h3[id], .bd-content > h4[id] {
     pointer-events: none
 }
