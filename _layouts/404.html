@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ page.language | default: en }}">
+{% assign script = page.name | replace: '.md', '' %}
+{% assign url = page.url | replace: '.html', '' %}
+{% assign keyPrefix = page.version | replace: '.', '-' | prepend: '-' | prepend: page.language %}
+
+{% include head.html %}
+
+<body class="error-page">
+{% include header.html %}
+
+<div class="container-fluid main-section">
+    <div class="row flex-xl-nowrap">
+        <main class="col-12 text-center">
+            {{ content }}
+        </main>
+    </div>
+</div>
+
+{% include footer.html %}
+</body>
+</html>
