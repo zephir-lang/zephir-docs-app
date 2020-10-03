@@ -974,14 +974,16 @@ body {
 
 .bd-brand-logos {
     display: table;
-    width: 100%;
-    overflow: hidden;
     color: #6f5499;
     background-color: #f9f9f9;
     border-radius: .25rem;
-    width: 40px;
     padding: .2rem;
     margin-right: 10px;
+}
+
+.bd-brand-logos svg {
+    width: 40px;
+    height: 40px;
 }
 
 .navbar-brand span {
