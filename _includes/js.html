@@ -12,6 +12,14 @@
         },
         debug: false
     });
+
+    function clickHeading() {
+      $('h1, h2, h3, h4').click(function() {
+        window.location.replace('#' + $(this).attr('id'));
+      });
+    }
+
+    clickHeading()
 </script>
 <script src="/assets/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
