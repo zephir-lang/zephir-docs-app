@@ -153,22 +153,6 @@ h1,h2,h3,h4 {
     max-width: 100%;
 }
 
-.bd-content > h2[id], .bd-content > h3[id], .bd-content > h4[id] {
-    pointer-events: none
-}
-
-.bd-content > h2[id] > a, .bd-content > h2[id] > div, .bd-content > h3[id] > a, .bd-content > h3[id] > div, .bd-content > h4[id] > a, .bd-content > h4[id] > div {
-    pointer-events: auto
-}
-
-.bd-content > h2[id]::before, .bd-content > h3[id]::before, .bd-content > h4[id]::before {
-    display: block;
-    height: 6rem;
-    margin-top: -6rem;
-    visibility: hidden;
-    content: ""
-}
-
 .bd-content > table {
     width: 100%;
     max-width: 100%;
