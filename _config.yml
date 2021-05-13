@@ -39,6 +39,9 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
+sass:
+  style: compressed
+
 exclude:
   - 0.12/crowdin.yml
   - 0.12/README.md
