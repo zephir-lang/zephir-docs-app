@@ -29,9 +29,9 @@ app:
   ]
 
 include:
-  - 0.12
-  - 0.11
-  - 0.10
+  - /0.12
+  - /0.11
+  - /0.10
   - _redirects
 
 kramdown:
