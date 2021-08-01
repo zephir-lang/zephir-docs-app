@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
   .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
-    color: #cbbde2;
+    color: #E2DDEE;
 
     &.active, &:hover {
       color: #fff;
@@ -311,7 +311,7 @@ h1, h2, h3, h4 {
   a {
     display: block;
     padding: .125rem 1.5rem;
-    color: #99979c;
+    color: #75757A;
 
     &:hover {
       color: #007bff;
@@ -1741,4 +1741,8 @@ h1, h2, h3, h4 {
     transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
     bottom: -10px;
   }
+}
+
+a {
+  color: #0071EB;
 }
