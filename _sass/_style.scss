@@ -1050,6 +1050,10 @@ h1, h2, h3, h4 {
 
 .navbar-brand span {
   font-size: 1rem;
+  color: #e2ddee;
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .bd-brand-item {
@@ -1693,6 +1697,9 @@ h1, h2, h3, h4 {
   width: 20px;
   height: 20px;
   fill: #cbbde2;
+  &:hover {
+    fill: #ffffff;
+  }
 }
 
 .mobile-menu-trigger {
