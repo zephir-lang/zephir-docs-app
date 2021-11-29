@@ -9,6 +9,7 @@ h1, h2, h3, h4 {
 .bd-navbar {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   min-height: 4rem;
   background-color: #6f5499;
