@@ -4,6 +4,13 @@ body {
 
 h1, h2, h3, h4 {
   cursor: pointer;
+  &:hover {
+    &:after {
+      content: "#";
+      display: inline-block;
+      margin-left: 6px;
+    }
+  }
 }
 
 .bd-navbar {
