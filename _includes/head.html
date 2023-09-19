@@ -1,51 +1,52 @@
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="{{ site.app.description }}">
-        <meta name="author" content="{{ site.app.author }}">
-        <meta name="generator" content="">
-        <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ site.app.description }}">
+    <meta name="author" content="{{ site.app.author }}">
+    <meta name="generator" content="">
+    <link href="{{ site.url }}{{ page.url | replace: '.html', '' }}" rel="canonical">
 
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.app.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.app.title }}{% endif %}</title>
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@{{ site.app.twitter }}">
-        <meta name="twitter:creator" content="@{{ site.app.twitter }}">
-        <meta name="twitter:title" content="{{ site.app.title }}">
-        <meta name="twitter:description" content="{{ site.app.description }}">
-        <meta name="twitter:image" content="https://assets.phalcon.io/phalcon/logo.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.app.twitter }}">
+    <meta name="twitter:creator" content="@{{ site.app.twitter }}">
+    <meta name="twitter:title" content="{{ site.app.title }}">
+    <meta name="twitter:description" content="{{ site.app.description }}">
+    <meta name="twitter:image" content="https://assets.phalcon.io/phalcon/logo.png">
 
-        <!-- Facebook -->
-        <meta property="og:url" content="{{ site.url }}">
-        <meta property="og:title" content="{{ site.app.title }}">
-        <meta property="og:description" content="{{ site.app.description }}">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://assets.phalcon.io/phalcon/logo.png">
+    <!-- Facebook -->
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.app.title }}">
+    <meta property="og:description" content="{{ site.app.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://assets.phalcon.io/phalcon/logo.png">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="https://assets.phalcon.io/zephir/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://assets.phalcon.io/zephir/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://assets.phalcon.io/zephir/favicons/favicon-16x16.png">
-        <link rel="icon" type="image/svg+xml" href="https://assets.phalcon.io/zephir/favicons/favicon.svg"/>
-        <link rel="icon" type="image/png" href="https://assets.phalcon.io/zephir/favicons/favicon.png"/>
-        <link rel="shortcut icon" type="image/x-icon" href="https://assets.phalcon.io/zephir/favicons/favicon.ico"/>
-        <link rel="manifest" href="/assets/favicons/site.webmanifest">
-        <link rel="mask-icon" href="https://assets.phalcon.io/zephir/favicons/safari-pinned-tab.svg" color="#6f5499">
-        <meta name="msapplication-config" content="https://assets.phalcon.io/zephir/favicons/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#6f5499">
-        <meta name="theme-color" content="#6f5499">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets.phalcon.io/zephir/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.phalcon.io/zephir/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.phalcon.io/zephir/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="https://assets.phalcon.io/zephir/favicons/favicon.svg"/>
+    <link rel="icon" type="image/png" href="https://assets.phalcon.io/zephir/favicons/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.phalcon.io/zephir/favicons/favicon.ico"/>
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="https://assets.phalcon.io/zephir/favicons/safari-pinned-tab.svg" color="#6f5499">
+    <meta name="msapplication-config" content="https://assets.phalcon.io/zephir/favicons/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#6f5499">
+    <meta name="theme-color" content="#6f5499">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-        <link rel="stylesheet"
-              href="{{ '/css/style.css' | relative_url }}">
+    <link rel="stylesheet"
+          href="{{ '/css/style.css' | relative_url }}">
 
-        <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
 
-        {% include analytics.html %}
-    </head>
+    {% include analytics.html %}
+</head>
