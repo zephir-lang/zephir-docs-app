@@ -1,13 +1,13 @@
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item active">
-                    <ul class="nav bd-sidenav">
-                        {% for sideMenu in site.data[sidebarIndex] %}
-                        <li class="toc-entry toc-h2">
-                            <a href="/{{ page.version }}/{{ page.language }}/{{ sideMenu.url }}">
-                                {{ sideMenu.text }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </nav>
+<nav class="collapse bd-links" id="bd-docs-nav">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+            {% for sideMenu in site.data[sidebarIndex] %}
+            <li class="toc-entry toc-h2">
+                <a href="/{{ page.version }}/{{ page.language }}/{{ sideMenu.url }}">
+                    {{ sideMenu.text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
