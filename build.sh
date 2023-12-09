@@ -1,5 +1,9 @@
-#!/usr/bin/env bash
+# !/bin/bash
 
+echo "Update Submodule"
+git submodule update --remote --merge 
+
+echo "Refresh Languages and Versions"
 CURRENT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 readarray -t VERSIONS < <(find . -maxdepth 1 -type d -printf '%P\n')
@@ -35,4 +39,9 @@ do
 done
 # End of outer loop.
 
-exit 0
+echo "Building Site"
+jekyll build
+
+echo "Copying Redirects"
+cp _redirects _site/_redirects
+
